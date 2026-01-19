@@ -17,6 +17,11 @@
         <div>
           {{ page_obj.first_name }} {{ page_obj.last_name }} — {{ page_obj.birthday }}
         </div>      
+        <div class="col-10">  
+          <div>
+            {{ birthday.first_name }} {{ birthday.last_name }} - {{ birthday.birthday }}<br>
+            <a href="{% url 'birthday:detail' birthday.id %}">Сколько до дня рождения?</a>
+          </div>
         <div>
           <a href="{% url 'page_obj:edit' page_obj.id %}">Изменить запись</a> | <a href="{% url 'page_obj:delete' page_obj.id %}">Удалить запись</a>
         </div>
